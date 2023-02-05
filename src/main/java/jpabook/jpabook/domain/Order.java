@@ -25,14 +25,30 @@ public class Order {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Delivery delivery;
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order" , cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
     private LocalDateTime orderTime; //주문 시간
 
     private OrderStatus status;
 
+    //== 연관관계 편의 메서드 ==//
+    public void setMember(Member member){
+        this.member = member;
+        member.getOrders().add(this);
+    }
 
+    //== 연관관계 편의 메서드 ==//
+    public void addOrderItem(OrderItem orderItem){
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
+
+    //== 연관관계 편의 메서드 ==//
+    public void setDelivery(Delivery delivery){
+        this.delivery = delivery;
+        delivery.setOrder(this);
+    }
 
 
 
