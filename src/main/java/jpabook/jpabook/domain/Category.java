@@ -22,9 +22,9 @@ public class Category {
     @JoinTable(name = "category_item",
         joinColumns = @JoinColumn(name = "category_id"),
             inverseJoinColumns = @JoinColumn(name = "item_id"))
-    private List<Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>(); // 이 컬렉션은 변경하지 말고 그냥 쓰는 것이 가장 안리하다.
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Category parent;
 
