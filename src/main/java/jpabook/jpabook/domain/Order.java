@@ -51,6 +51,8 @@ public class Order {
     }
 
 
+
+    // 연관관계 메서드
     public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems){
         Order order = new Order();
         order.setMember(member);
