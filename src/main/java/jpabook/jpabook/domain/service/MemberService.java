@@ -38,7 +38,7 @@ public class MemberService {
     }
 
     public void update(Long id, String name) {
-        Member member = memberRepository.findOne(id);
+        Member member = memberRepository.findOne(id); // 불러오는 이유는 변경감지를 이용해서 등록하기 위해서 이다.
         member.setName(name);
     }
 }
