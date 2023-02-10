@@ -34,6 +34,7 @@ public class MemberApiController {
     @PostMapping("/api/v1/members")
     public CreateMemberResponse saveMemberV1(@RequestBody @Validated Member member){
     // 절대로 이렇게 쓰면 안된다.
+        //외부로 엔티티를 들어내면 안된다. 
         Long id = memberService.join(member);
         return new CreateMemberResponse(id);
     }
