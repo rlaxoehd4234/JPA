@@ -1,7 +1,4 @@
 
-
-
-JPA ORM 표준 프레임 워크 
 - 3장(영속성 관리)
 https://melodious-stretch-673.notion.site/3-29bf71b248ac4a58abdbd60ee82dadf0
 
