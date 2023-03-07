@@ -19,3 +19,6 @@ https://melodious-stretch-673.notion.site/9-45e75166903747fabe9b01e148a5b6f8
 - 10장(객체지향 쿼리 언어)
 
 
+
+협업 꿀팁 
+- Intellij codewithme 활용
